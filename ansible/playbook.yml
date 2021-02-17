@@ -1,0 +1,9 @@
+
+- hosts: default
+  connection: local
+  roles:
+    - brew
+    - dotfiles
+    - nodejs
+    - python
+    - go

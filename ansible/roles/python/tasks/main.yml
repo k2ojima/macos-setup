@@ -1,0 +1,14 @@
+---
+
+- name: Setup python
+  shell: pyenv install 3.8.6 && pyenv global 3.8.6
+
+- name: Upgrade pip
+  shell: pip install pip --upgrade
+
+- name: Install fundamental packages
+  pip:
+    name:
+      - ansible-lint
+      - setuptools
+      - wheel

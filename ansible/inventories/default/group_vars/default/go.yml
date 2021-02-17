@@ -1,0 +1,7 @@
+---
+
+go_pkg:
+  - github.com/dropbox/dbxcli
+  - github.com/mitchellh/gox
+  - github.com/vultr/packer-builder-vultr
+  - github.com/vultr/terraform-provider-vultr

@@ -1,0 +1,5 @@
+---
+
+- name: Install pkg
+  shell: go get -u "{{ item }}"
+  with_items: "{{ go_pkg }}"

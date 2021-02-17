@@ -1,0 +1,8 @@
+---
+
+- name: Install node.js
+  shell: nodebrew install latest
+
+- name: Setup npm
+  shell: yarn add global "{{ item }}"
+  with_items: "{{ yarn_packages }}"

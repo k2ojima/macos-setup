@@ -1,0 +1,31 @@
+---
+- name: Init homebrew
+  shell: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  become: yes
+
+- name: Homebrew tap
+  homebrew_tap:
+    name: "{{ item }}"
+    state: "present"
+  with_items: "{{ brew_taps }}"
+  become: yes
+
+- name: Install Homebrew Cask Packages
+  homebrew_cask:
+    name: "{{ item }}"
+    state: "present"
+    install_options: "appdir=/Applications"
+    accept_external_apps: yes
+  with_items: "{{ brew_casks }}"
+  become: yes
+
+- name: Update Homebrew
+  homebrew:
+    update_homebrew: yes
+  become: yes
+
+- name: Install Homebrew Packages
+  homebrew:
+    name: "{{ brew_packages }}"
+    state: "present"
+  become: yes

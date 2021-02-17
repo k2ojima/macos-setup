@@ -1,0 +1,19 @@
+---
+
+- name: Clone Prezto
+  shell: git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+- name: Init Prezto
+  shell: setopt EXTENDED_GLOB; \
+    for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do; ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"; done
+
+- name: Copy zshrc
+  ansible.builtin.copy:
+    src: roles/dotfiles/files/.zshrc
+    dest: ~/
+    mode: u+rwx
+
+- name: Copy an entrypoint for Fork
+  ansible.builtin.copy:
+    src: roles/dotfiles/files/.fork-entrypoint.sh
+    dest: ~/
+    mode: u+rwx
