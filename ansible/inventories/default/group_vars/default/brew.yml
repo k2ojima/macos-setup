@@ -28,13 +28,16 @@ brew_casks:
   - mixxx
   - mullvadvpn
   - nosql-workbench
+  - onyx
   - openvpn-connect
   - poedit
+  - sequel-pro
   - skitch
   - slack
   - spotify
   - sublime-text
   - teamviewer
+  - tor-browser
   - tunnelblick
   - typora
   - visual-studio-code
