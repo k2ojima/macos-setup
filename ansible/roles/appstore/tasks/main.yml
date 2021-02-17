@@ -1,0 +1,10 @@
+---
+
+- name: Register installed apps list
+  shell: mas list
+  register: installed_list
+
+- name: Install App Store applications
+  shell: mas install "{{ item.id }}"
+  when: "installed_list.stdout_lines | select('search', item.id) | list | length == 0"
+  with_items: "{{ apps_list }}"

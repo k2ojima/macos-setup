@@ -1,0 +1,47 @@
+---
+
+apps_list:
+  # Xcode
+  - 497799835
+  # Keynote
+  - 409183694
+  # Numbers
+  - 409203825
+  # Pages
+  - 409201541
+  # iMovie
+  - 408981434
+  # Bear
+  - 1091189122
+  # LINE
+  - 539883307
+  # LadioCast
+  - 411213048
+  # LogicProX
+  - 634148309
+  # MarsEdit
+  - 1198319098
+  # MicrosoftRemoteDesktop
+  - 715768417
+  # PDFReaderProLite
+  - 919472673
+  # QuickCamera
+  - 598853070
+  # Spark
+  - 1176895641
+  # Speedtest
+  - 1153157709
+  # TheUnarchiver
+  - 425424353
+
+  ## Safari Extensions
+  # Cascadea
+  - 1432182561
+  # EvernoteWebClipper
+  - 1481669779
+  # SavetoPocket
+  - 1477385213
+  # SessionPal
+  - 1515213004
+  # Toast
+  - 1465707487

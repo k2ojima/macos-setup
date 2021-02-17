@@ -99,6 +99,7 @@ brew_packages:
   - libtool
   - libunistring
   - lzo
+  - mas
   - mecab
   - mecab-ipadic
   - msgpack

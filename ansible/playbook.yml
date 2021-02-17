@@ -3,6 +3,7 @@
   connection: local
   roles:
     - brew
+    - appstore
     - dotfiles
     - nodejs
     - python
