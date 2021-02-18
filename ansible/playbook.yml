@@ -9,7 +9,7 @@
     - python
     - go
 
-- hosts: for-jobs
+- hosts: for_jobs
   connection: local
   roles:
     - brew

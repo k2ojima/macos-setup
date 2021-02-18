@@ -3,10 +3,11 @@
 - name: Register installed apps list
   command: mas list
   register: installed_list
-  check_mode: false
+  check_mode: true
   changed_when: false
 
 - name: Install App Store applications
   command: mas install "{{ item }}"
-  when: "installed_list.stdout_lines | select('search', item) | list | length == 0 and not installed_list is skipped"
+  when: "not ansible_check_mode and installed_list.stdout_lines | select('search', item) | list | length == 0"
   with_items: "{{ apps_list }}"
+  check_mode: true

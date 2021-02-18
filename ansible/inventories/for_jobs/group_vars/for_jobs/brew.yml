@@ -1,6 +1,6 @@
 ---
 brew_taps:
-  - aws/tap
+  - aws/homebrew-tap
 
 brew_casks:
   - 1password
