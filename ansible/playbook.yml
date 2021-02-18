@@ -8,3 +8,13 @@
     - nodejs
     - python
     - go
+
+- hosts: for-jobs
+  connection: local
+  roles:
+    - brew
+    - appstore
+    - dotfiles
+    - nodejs
+    - python
+    - go

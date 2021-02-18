@@ -1,0 +1,11 @@
+---
+yarn_packages:
+  - "@vue/cli"
+  - aws-cdk
+  - dynamodump
+  - jest
+  - mocha
+  - svgexport
+  - ts-node
+  - tsc
+  - typescript
