@@ -70,11 +70,6 @@ git config --global alias.pick "cherry-pick -n";
 git config --global alias.sr "symbolic-ref --short HEAD"
 git config --global pull.rebase false
 
-# init ssh setting
-echo 'Adding ssh keys...'
-eval "$(ssh-agent -s)" >/dev/null
-ssh-add -K ~/.ssh/github/id_rsa >/dev/null 2>&1
-
 # init pyenv
 eval "$(pyenv init -)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
@@ -105,7 +100,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/Cellar/tfenv/2.0.0/versions/0.14.2/terraform terraform
