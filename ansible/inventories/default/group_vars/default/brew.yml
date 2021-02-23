@@ -37,6 +37,7 @@ brew_casks:
   - spotify
   - sublime-text
   - teamviewer
+  - telegram
   - tor-browser
   - tunnelblick
   - typora
