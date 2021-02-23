@@ -43,7 +43,7 @@ brew_casks:
   - visual-studio-code
   - xld
 
-# brew formulaes
+# brew formulae
 brew_packages:
   - act
   - adns
@@ -80,25 +80,12 @@ brew_packages:
   - gts
   - guile
   - harfbuzz
-  - heroku
-  - heroku-node
   - icu4c
   - jasper
   - jemalloc
   - jpeg
   - jq
   - lazydocker
-  - libev
-  - libevent
-  - libffi
-  - libidn2
-  - libpng
-  - libscrypt
-  - libtasn1
-  - libtiff
-  - libtool
-  - libunistring
-  - lzo
   - mas
   - mecab
   - mecab-ipadic
@@ -115,7 +102,6 @@ brew_packages:
   - p11-kit
   - packer
   - pandoc
-  - pandoc-citeproc
   - pango
   - pcre
   - pcre2
