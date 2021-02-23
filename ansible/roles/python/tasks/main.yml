@@ -1,7 +1,7 @@
 ---
 
 - name: Setup python
-  command: pyenv install -f 3.8.6 && pyenv global 3.8.6
+  shell: LDFLAGS="-L$(xcrun --show-sdk-path)/usr/lib" pyenv install -f 3.8.6 && pyenv global 3.8.6
 
 - name: Upgrade pip
   command: pip install pip --upgrade
