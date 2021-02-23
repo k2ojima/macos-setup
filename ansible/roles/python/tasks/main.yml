@@ -1,7 +1,7 @@
 ---
 
 - name: Setup python
-  command: pyenv install 3.8.6 && pyenv global 3.8.6
+  command: pyenv install -f 3.8.6 && pyenv global 3.8.6
 
 - name: Upgrade pip
   command: pip install pip --upgrade

@@ -2,6 +2,7 @@
 
 - name: Install node.js
   command: nodebrew install latest
+  ignore_errors: true
 
 - name: Setup npm
   command: yarn add global "{{ item }}"

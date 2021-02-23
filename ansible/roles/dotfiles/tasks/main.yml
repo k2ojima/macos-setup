@@ -1,13 +1,17 @@
 ---
 
+- name: Get stat of Prezto
+  ansible.builtin.stat:
+    path: ~/.zprezto
+  register: zprezto_files
 - name: Clone Prezto
   ansible.builtin.git:
     repo: https://github.com/sorin-ionescu/prezto.git
-    dest: "${ZDOTDIR:-$HOME}/.zprezto"
+    dest: ~/.zprezto
     recursive: true
-- name: Init Prezto
-  shell: setopt EXTENDED_GLOB; \
-    for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do; ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"; done
+  when: zprezto_files.stat.isdir is not defined
+# - name: Init Prezto
+#   command: setopt EXTENDED_GLOB; for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N)\do; ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"\done
 
 - name: Copy zshrc
   ansible.builtin.copy:
