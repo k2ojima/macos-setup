@@ -12,6 +12,7 @@ brew_casks:
   - dbeaver-community
   - docker
   - drawio
+  - flux
   - fork
   - gimp
   - google-chrome
