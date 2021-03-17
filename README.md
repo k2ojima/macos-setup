@@ -33,6 +33,9 @@ Install ansible through pip.
 
 ```bash
 $ pip install ansible --upgrade
+
+# Install community.general collection
+$ ansible-galaxy collection install community.general
 ```
 
 Setup with running playbook.

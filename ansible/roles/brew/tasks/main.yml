@@ -1,13 +1,13 @@
 ---
 
 - name: Homebrew tap
-  homebrew_tap:
+  community.general.homebrew_tap:
     name: "{{ item }}"
     state: "present"
   with_items: "{{ brew_taps }}"
 
 - name: Install Homebrew Cask Packages
-  homebrew_cask:
+  community.general.homebrew_cask:
     name: "{{ item }}"
     state: "present"
     install_options: "appdir=/Applications"
@@ -15,7 +15,7 @@
   with_items: "{{ brew_casks }}"
 
 - name: Install Homebrew Packages
-  homebrew:
-    name: "{{ brew_packages }}"
+  community.general.homebrew:
+    name: "{{ item }}"
     state: "present"
-    update_homebrew: true
+  with_items: "{{ brew_packages }}"
