@@ -49,8 +49,9 @@ function set-aws-profile() {
 }
 
 # export paths
-export PATH=$HOME/.nodebrew/current/bin:$HOME/.local/bin:$PATH
+export PYENV_ROOT="$HOME/.pyenv"
 export GOPATH=$HOME/go
+export PATH=$HOME/.nodebrew/current/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$PATH
 
 # foundamental alias
 alias vi='vim'
@@ -71,7 +72,7 @@ git config --global alias.sr "symbolic-ref --short HEAD"
 git config --global pull.rebase false
 
 # init pyenv
-eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 # zsh prompt settings
